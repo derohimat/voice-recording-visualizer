@@ -120,7 +120,7 @@ public class VisualizerView extends FrameLayout {
      *
      * @param volume volume from mic input
      */
-    protected void receive(final int volume) {
+    public void receive(final int volume) {
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override
             public void run() {
