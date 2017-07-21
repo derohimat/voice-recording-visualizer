@@ -52,5 +52,3 @@ def localProperty(name) {
 }
 
 apply from: 'android-artifacts.gradle'
-apply from: 'central-publish.gradle'
-apply from: 'bintray-publish.gradle'

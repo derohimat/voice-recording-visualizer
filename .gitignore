@@ -34,3 +34,6 @@ proguard/
 
 /.settings
 /.gradle
+
+#DS_Store from mac
+.DS_Store
