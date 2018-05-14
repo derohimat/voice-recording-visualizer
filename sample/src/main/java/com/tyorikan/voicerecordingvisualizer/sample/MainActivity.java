@@ -1,9 +1,5 @@
 package com.tyorikan.voicerecordingvisualizer.sample;
 
-
-import com.tyorikan.voicerecordingvisualizer.RecordingSampler;
-import com.tyorikan.voicerecordingvisualizer.VisualizerView;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
+import com.tyorikan.voicerecordingvisualizer.RecordingSampler;
+import com.tyorikan.voicerecordingvisualizer.VisualizerView;
 
 public class MainActivity extends AppCompatActivity implements
         RecordingSampler.CalculateVolumeListener {
@@ -33,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main);
 
         {
-            mVisualizerView = (VisualizerView) findViewById(R.id.visualizer);
+            mVisualizerView = findViewById(R.id.visualizer);
             ViewTreeObserver observer = mVisualizerView.getViewTreeObserver();
             observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                 @Override
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements
         }
 
         {
-            mVisualizerView2 = (VisualizerView) findViewById(R.id.visualizer2);
+            mVisualizerView2 = findViewById(R.id.visualizer2);
             ViewTreeObserver observer = mVisualizerView2.getViewTreeObserver();
             observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                 @Override
@@ -64,8 +62,8 @@ public class MainActivity extends AppCompatActivity implements
             });
         }
 
-        mVisualizerView3 = (VisualizerView) findViewById(R.id.visualizer3);
-        mFloatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
+        mVisualizerView3 = findViewById(R.id.visualizer3);
+        mFloatingActionButton = findViewById(R.id.fab);
 
         // create AudioRecord
         mRecordingSampler = new RecordingSampler();
